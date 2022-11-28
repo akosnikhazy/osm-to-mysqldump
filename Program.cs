@@ -88,7 +88,7 @@ namespace osm_to_sql
                     continue;
                 }
                 
-                // don not forget to delete the las , from the end of the mysql dump.
+                // do not forget to delete the las , from the end of the mysql dump.
                 // sorry for the lazy code here, why bother when you use it only once
                 sqlPart += ",";
                 SQLLine.Add(sqlPart);
