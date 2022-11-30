@@ -23,7 +23,7 @@ namespace osm_to_sql
             List<string> SQLLine = new List<string>();
 
             // first INSERT query
-            string sqlPart = "INSERT INTO `tuz_cimek` (`varos`,`iranyitoszam`,`utca`) VALUES "; 
+            string sqlPart = "INSERT INTO `addr` (`city`,`postcode`,`street`) VALUES "; 
                
             // collecting MySQL insert values in this
             string[] insertData;
@@ -79,7 +79,7 @@ namespace osm_to_sql
                     // I put it in this line because at the end we delete duplicates
                     // there could be many duplicates depending on your osm file.
                     // If you put this in its own line at the end it will be deleted.
-                    sqlPart += ";INSERT INTO `tuz_cimek` (`varos`,`iranyitoszam`,`utca`) VALUES ";
+                    sqlPart += ";INSERT INTO `addr` (`city`,`postcode`,`street`) VALUES ";
                     
                     SQLLine.Add(sqlPart);
                     
