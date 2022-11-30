@@ -34,7 +34,7 @@ namespace osm_to_sql
 
             // loading the osm file
             XmlDocument osm = new XmlDocument();
-            os,.Load("your-osm-file.osm");
+            osm.Load("your-osm-file.osm");
          
             // basic xml loop, knowing how an osm xml looks like
             foreach (XmlNode node in osm.DocumentElement.ChildNodes)
